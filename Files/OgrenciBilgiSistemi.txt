@@ -1,0 +1,5 @@
+Kaan 100 40 60
+Beyda 40 90 45
+Emre 34 54 100
+Hüseyin 100 20 48
+Berk 14 28 96
