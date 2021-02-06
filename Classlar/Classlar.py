@@ -3,6 +3,7 @@ class Person:
         self.name = name
         self.year = year
 
+
 p1 = Person(name = 'Melike',year = 2000)
 p2 = Person(year = 2000 ,name = "Berkay")
 
