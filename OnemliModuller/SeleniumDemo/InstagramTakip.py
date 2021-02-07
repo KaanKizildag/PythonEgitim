@@ -48,4 +48,4 @@ password = input('Şifrenizi girin: ')
 bot.girisYap(username,password)
 
 time.sleep(10)
-controller.kapat()
+# controller.kapat()
