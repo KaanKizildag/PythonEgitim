@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
-    <height>289</height>
+    <width>680</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QLabel {
-	font-size : 24px;
+	font-size : 18pt;
 	width : 10px;
 	color: rgb(186, 189, 182);
 	background-color: rgba(0, 0, 0, 150);
@@ -28,14 +28,37 @@ QWidget{
 QPushButton{
 	background-color: rgb(196, 160, 0);
 	color: rgb(46, 52, 54);
-	image : url(atom-icon.png);
+	border-radius : 15px;
+}
+QPushButton:hover{
+	color : rgb(186, 189, 182);
+	background-color : rgb(252, 233, 79);
+}
+
+QTableWidget{
+	background-color: rgb(186, 189, 182);
+}
+QTableWidget::item:selected{ 
+	background-color: rgb(252, 175, 62);
+}
+QTableWidget::item:hover{ 
+	background-color: rgb(138, 226, 52);
+}
+
+QHeaderView::section {
+    background-color: #646464;
+    padding: 4px;
+    font-size: 14pt;
+    border-style: none;
+    border-bottom: 1px solid #fffff8;
+    border-right: 1px solid #fffff8;
 }</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>204</y>
+     <x>80</x>
+     <y>380</y>
      <width>171</width>
      <height>51</height>
     </rect>
@@ -46,14 +69,18 @@ QPushButton{
    <property name="text">
     <string>PushButton</string>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>atom-icon.png</normaloff>atom-icon.png</iconset>
+   </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
+     <x>390</x>
+     <y>370</y>
      <width>257</width>
-     <height>64</height>
+     <height>95</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -67,6 +94,9 @@ QPushButton{
     <item row="0" column="1">
      <widget class="QLineEdit" name="lineEdit"/>
     </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_2"/>
+    </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
@@ -74,10 +104,52 @@ QPushButton{
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
-    </item>
    </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>531</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <row>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </row>
+   <column>
+    <property name="text">
+     <string>Id</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>İsim</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Soyisim</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Numara</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Email</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

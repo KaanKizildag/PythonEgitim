@@ -7,7 +7,7 @@ class SqlDal:
 
     def getConnection(self):
         self.connection = sqlite3.connect('Products.db')
-
+    # InnerFunction kullanılabilir.
     def getProducts(self):
         self.getConnection()
         cursor = self.connection.cursor()

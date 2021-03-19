@@ -11,11 +11,14 @@ class Window(QtWidgets.QMainWindow):
         self.ui.listWidget.addItems(['Kaan','Beyda','Emre'])
 
         self.ui.btnAdd.clicked.connect(self.addStudent)
+        self.ui.btnExit.clicked.connect(self.exit)
+
+    def exit(self):
+        sys.exit()
 
     def addStudent(self):
-
         text, ok = QInputDialog.getText(self, 'new student', 'student add')
-
+        # ok --> True | False
         if ok and text is not None:
             self.ui.listWidget.insertItem(0, text)
         else:

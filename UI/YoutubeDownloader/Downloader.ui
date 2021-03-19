@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>567</width>
+    <height>381</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+	background-color: rgb(85, 87, 83);
+	color: rgb(238, 238, 236);
+}
+
+QLineEdit{
+	font: 18pt &quot;Ubuntu&quot;;
+	border : 2px solid rgb(211, 215, 207);
+	border-radius : 15px;	
+	height : 50px;
+}
+QPushButton{
+	border-radius: 15px;
+	height : 55px;
+	background-color: rgb(238, 238, 236);
+	color: rgb(46, 52, 54);
+	font : 18pt;
+}
+QPushButton:hover:!pressed{
+	border-radius: 15px;
+	height : 55px;
+	background-color: rgb(204, 0, 0);
+	color: rgb(238, 238, 236);
+	font : 18pt;
+}
+QPushButton:hover:pressed{
+	border-radius: 15px;
+	height : 55px;
+	background-color: rgb(255, 0, 0);
+	border : 5px solid rgba(0,0,0,0);
+	color: rgb(238, 238, 236);
+	font : 18pt;
+}
+QListWidget{
+	color: rgb(46, 52, 54);
+	font : 18pt;
+}
+QListWidget::item:selected{
+	color: rgb(238, 238, 236);
+	background-color: rgb(204, 0, 0);
+	font : 18pt;
+}</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>551</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0">
+    <property name="spacing">
+     <number>25</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>15</number>
+    </property>
+    <property name="topMargin">
+     <number>15</number>
+    </property>
+    <property name="rightMargin">
+     <number>15</number>
+    </property>
+    <property name="bottomMargin">
+     <number>15</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>19</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>YouTube Downloader</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="tbxUrl">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>https://www.youtube.com/</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="tblRes"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnDownload">
+      <property name="text">
+       <string>Download</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
