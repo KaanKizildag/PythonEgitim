@@ -1,12 +1,9 @@
 from PyQt5 import QtWidgets
 import sys
-import time
-
 from pytube.exceptions import RegexMatchError
 from DownloaderForm import Ui_Form
 import threading
 from PyQt5.QtWidgets import QMessageBox
-
 from UI.YoutubeDownloader import Downloader
 
 
@@ -16,17 +13,12 @@ class Window(QtWidgets.QMainWindow):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.ui.btnDownload.clicked.connect(self.INDIR)
-        self.ui.tbxUrl.textChanged.connect(self.videoDetaylari)
+        self.ui.btnSearch.clicked.connect(self.videoDetaylari)
 
 
     def videoDetaylari(self):
-        self.ui.tblRes.clear()
-        self.ui.tblRes.addItem('Aranıyor')
         try:
-            self.ui.tblRes.clear()
-            self.ui.tblRes.addItem('Aranıyor')
-            threading.Thread(Downloader.analiz(url=self.ui.tbxUrl.text())).start()
-            #Downloader.analiz(url=self.ui.tbxUrl.text())
+            Downloader.analiz(url=self.ui.tbxUrl.text())
             self.ui.tblRes.clear()
             self.ui.tblRes.addItems(Downloader.liste)
             # print('thread içi islemler')
@@ -45,5 +37,4 @@ def App():
     window = Window()
     window.show()
     sys.exit(app.exec_())
-
 App()

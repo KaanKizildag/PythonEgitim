@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(567, 381)
+        Form.resize(568, 469)
         Form.setStyleSheet("* {\n"
 "    background-color: rgb(85, 87, 83);\n"
 "    color: rgb(238, 238, 236);\n"
@@ -57,7 +57,7 @@ class Ui_Form(object):
 "    font : 18pt;\n"
 "}")
         self.verticalLayoutWidget = QtWidgets.QWidget(Form)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 551, 361))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 551, 451))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
@@ -75,6 +75,9 @@ class Ui_Form(object):
         self.tbxUrl.setText("")
         self.tbxUrl.setObjectName("tbxUrl")
         self.verticalLayout.addWidget(self.tbxUrl)
+        self.btnSearch = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.btnSearch.setObjectName("btnSearch")
+        self.verticalLayout.addWidget(self.btnSearch)
         self.tblRes = QtWidgets.QListWidget(self.verticalLayoutWidget)
         self.tblRes.setObjectName("tblRes")
         self.verticalLayout.addWidget(self.tblRes)
@@ -90,4 +93,5 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "YouTube Downloader"))
         self.tbxUrl.setPlaceholderText(_translate("Form", "https://www.youtube.com/"))
+        self.btnSearch.setText(_translate("Form", "Search"))
         self.btnDownload.setText(_translate("Form", "Download"))

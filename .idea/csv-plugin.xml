@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/UI/YoutubeDownloader/Downloader.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/UI/YoutubeDownloader/YoutubeDownloader.py">
           <value>
             <Attribute>
