@@ -1,14 +1,23 @@
 from pytube import YouTube
+liste = []
+_url = ''
+videolar = []
 
-def download(self):
-    url = 'https://www.youtube.com/watch?v=HCjNJDNzw8Y'
+def download(index,url):
     yt = YouTube(url=url)
-    vids= yt.streams.all()
-    for i in range(len(vids)):
-        print(i,'. ',vids[i])
-    video = yt.streams.filter(progressive=True).order_by('resolution').desc().first()
+    videolar = yt.streams.filter()
+    print(videolar[index])
+    videolar[index].download()
 
-    print(video.resolution)
-    input('indirelim mi?')
+def analiz(url):
+    yt = YouTube(url=url)
+    videolar = yt.streams.filter()
+    for eleman in videolar:
+        if(eleman.type == 'audio'):
+            liste.append('Ses: ' +eleman.abr)
+        else:
+            liste.append(eleman.resolution + ' Format: ' + eleman.mime_type)
+    print('analiz metodu çalışıyor')
 
-    video.download()
+
+# list = Downloader.analiz(url = 'https://www.youtube.com/watch?v=VHoT4N43jK8')
